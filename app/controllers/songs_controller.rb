@@ -79,7 +79,7 @@ class SongsController < ApplicationController
     @song.genre_ids = params[:genres]
     @song.save
 
-    binding.pry
+    
 
 
     redirect("/songs/#{@song.slug}")
