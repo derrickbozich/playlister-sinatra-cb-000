@@ -34,7 +34,7 @@ class SongsController < ApplicationController
     @song.genre_ids = params['genres'] if params['genres']
 
 
-    if !params['genre_name'] == ""
+    if params['genre_name'] != ""
       genre = Genre.find_or_create_by(:name =>  params['genre_name'])
       @song.genres << genre
 
@@ -42,9 +42,6 @@ class SongsController < ApplicationController
 
     @song.save
 
-    Artist.all.uniq!
-    Genre.all.uniq!
-    Song.all.uniq!
 
     binding.pry
 
