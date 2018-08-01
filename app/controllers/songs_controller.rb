@@ -40,7 +40,9 @@ class SongsController < ApplicationController
       binding.pry
     end
 
-
+    Artist.uniq!
+    Genre.uniq!
+    Song.uniq!
     @song.save
 
 
