@@ -38,9 +38,11 @@ class SongsController < ApplicationController
     end
 
     if params['genres']
-
+      
       params['genres'].each do |g|
-        @song.genre_ids << g
+        genre = Genre.find_or_create_by(:id => g)
+        puts genre
+        @song.genres << genre 
       end
       binding.pry
     end
