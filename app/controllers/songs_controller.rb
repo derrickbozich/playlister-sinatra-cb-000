@@ -43,10 +43,10 @@ class SongsController < ApplicationController
       @song.genre_ids << genre.id
     else
       @song.genre_ids << genre.id
-      
+
     end
 
-    
+
 
     @song.save
 
