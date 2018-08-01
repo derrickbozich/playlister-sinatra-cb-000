@@ -31,7 +31,7 @@ class SongsController < ApplicationController
       @song.artist = Artist.find_or_create_by(:name => params['artist_name'])
     end
 
-    
+
 
 
     if params['genre_name'] != ""
