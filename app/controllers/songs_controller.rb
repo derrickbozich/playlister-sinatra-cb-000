@@ -38,7 +38,7 @@ class SongsController < ApplicationController
     end
 
     if params['genres']
-      
+
       params['genres'].each do |g|
         @song.genre_ids << g
       end
