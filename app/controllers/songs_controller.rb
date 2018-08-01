@@ -31,14 +31,16 @@ class SongsController < ApplicationController
       @song.artist = Artist.find_or_create_by(:name => params['artist_name'])
     end
 
-    @song.genre_ids = params['genres'] if params['genres']
+    
 
 
     if params['genre_name'] != ""
       genre = Genre.find_or_create_by(:name =>  params['genre_name'])
-      @song.genres << genre
+      params['genres'] << genre.id
 
     end
+
+    @song.genre_ids = params['genres'] if params['genres']
 
     @song.save
 
