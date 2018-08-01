@@ -23,7 +23,7 @@ class SongsController < ApplicationController
 
   post '/songs' do
 
-    @song = Song.create(name: params['name'] )
+    @song = Song.find_or_create_by(:name => params['name'] )
 
     if params['artist_name'].empty?
       @song.artist = Artist.find_by_id(params[:artist_id])
@@ -34,7 +34,7 @@ class SongsController < ApplicationController
     @song.genre_ids = params['genres'] if params['genres']
 
 
-    if params['genre_name']
+    if !params['genre_name'] == ""
       genre = Genre.find_or_create_by(:name =>  params['genre_name'])
       @song.genres << genre
 
