@@ -50,6 +50,7 @@ describe "Song Forms" do
       end
 
       it "does not create a new artist" do
+    
         expect {
           fill_in "Name", with: song_name
           check "Hippity Hop"

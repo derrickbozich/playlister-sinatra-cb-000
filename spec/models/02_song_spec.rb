@@ -29,8 +29,9 @@ describe "Song" do
   end
 
   it "can slugify its name" do
-
+    
     expect(@song.slug).to eq("blank-space")
+    
   end
 
   describe "Class methods" do
