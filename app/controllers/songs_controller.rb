@@ -33,6 +33,7 @@ class SongsController < ApplicationController
 
     if params['genre_name'] != ""
       genre = Genre.find_or_create_by(:name =>  params['genre_name'])
+      binding.pry
       @song.genres << genre
     end
 
