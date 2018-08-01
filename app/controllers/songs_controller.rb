@@ -38,9 +38,6 @@ class SongsController < ApplicationController
 
     if params['genres']
       @song.genre_ids << params['genres']
-      
-    else
-      @song.genre_ids << genre.id
     end
 
 
