@@ -15,6 +15,6 @@ GENRES
 <% @artist.genres.uniq! %>
 <% @artist.genres.each do |genre| %>
   <ul>
-    <li><a href="/genres/<%= genre.slug %>"><%= genre.name %></a></li>
+    <li><a href="/genres/<%= genre.slug %>"><%= genre.name %><%= genre.id %></a></li>
   </ul>
 <% end %>
