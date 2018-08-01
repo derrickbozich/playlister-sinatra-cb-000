@@ -1,6 +1,7 @@
 class SongsController < ApplicationController
 
-  # use Rack::Flash
+  use Rack::Flash
+  
 
 
 
