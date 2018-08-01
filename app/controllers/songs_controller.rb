@@ -82,7 +82,10 @@ class SongsController < ApplicationController
 
       @song.genres << genre
     end
+    
     @song.save
+
+    binding.pry
 
 
 
