@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
 
   use Rack::Flash
-  
+
 
 
 
@@ -80,7 +80,7 @@ class SongsController < ApplicationController
     @song = Song.find_by_id(params['song_id'])
 
     @song.artist = Artist.find_or_create_by(:name => params["artist_name"])
-    
+
 
     # @song.genre_ids = params['genres']
     params['genres'].each do |g|
