@@ -38,7 +38,7 @@ class SongsController < ApplicationController
       @song.genres << genre
       binding.pry
     end
-    
+
 
     @song.save
 
