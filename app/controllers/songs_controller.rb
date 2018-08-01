@@ -38,6 +38,7 @@ class SongsController < ApplicationController
     end
 
     if params['genres']
+      binding.pry
       @song.genre_ids << params['genres']
     end
 
